@@ -19,8 +19,8 @@ namespace vega_course_proj.Migrations
             migrationBuilder.Sql("INSERT INTO Models (Name, MakeId) VALUES('Make2-ModelC', (SELECT Id FROM Makes WHERE Name='Make2'))");
 
             migrationBuilder.Sql("INSERT INTO Models (Name, MakeId) VALUES('Make3-ModelA', (SELECT Id FROM Makes WHERE Name='Make3'))");
-            migrationBuilder.Sql("INSERT INTO Models (Name, MakeId) VALUES('Make3-ModelA', (SELECT Id FROM Makes WHERE Name='Make3'))");
-            migrationBuilder.Sql("INSERT INTO Models (Name, MakeId) VALUES('Make3-ModelA', (SELECT Id FROM Makes WHERE Name='Make3'))");
+            migrationBuilder.Sql("INSERT INTO Models (Name, MakeId) VALUES('Make3-ModelB', (SELECT Id FROM Makes WHERE Name='Make3'))");
+            migrationBuilder.Sql("INSERT INTO Models (Name, MakeId) VALUES('Make3-ModelC', (SELECT Id FROM Makes WHERE Name='Make3'))");
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)

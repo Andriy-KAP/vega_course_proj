@@ -1,3 +1,5 @@
+using System.ComponentModel.DataAnnotations.Schema;
+
 namespace vega_course_proj.Models
 {
     [Table("ModelsFeatures")]
