@@ -7,7 +7,7 @@ namespace vega_course_proj.Persistence
     {
         public DbSet<Make> Makes { get; set; }
         public DbSet<Model> Models { get; set; }
-        public DbSet<Feature> Features { get; set; }
+        public DbSet<Feature> Feature { get; set; }
         public DbSet<ModelFeature> ModelsFeatures { get; set; }
         public VegaDbContext(DbContextOptions<VegaDbContext> options)
             :base(options)
@@ -17,6 +17,8 @@ namespace vega_course_proj.Persistence
 
         protected override void OnModelCreating(ModelBuilder builder)
         {
+            builder.Entity<Feature>().ToTable<Feature>("Feature");
+
             builder.Entity<ModelFeature>()
                 .HasKey(mf => new { mf.FeatureId, mf.ModelId });
 

@@ -48,7 +48,7 @@ namespace vega_course_proj.Migrations
 
         protected override void Down(MigrationBuilder migrationBuilder)
         {
-            migrationBuilder.Sql("DELETE FROM Features");
+            migrationBuilder.Sql("DELETE FROM Feature");
             migrationBuilder.Sql("DELETE FROM ModelsFeatures");
         }
     }
