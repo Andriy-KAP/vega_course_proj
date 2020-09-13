@@ -1,3 +1,5 @@
+using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
@@ -13,5 +15,12 @@ namespace vega_course_proj.Models
 
         public Make Make { get; set; }
         public int MakeId { get; set; }
+
+        public ICollection<ModelFeature> ModelFeatures { get; set; }
+
+        public Model()
+        {
+            ModelFeatures = new Collection<ModelFeature>();
+        }
     }
 }
