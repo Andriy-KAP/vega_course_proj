@@ -14,4 +14,10 @@ export class VehicleFormService{
             return response;
         }));
     }
+
+    public getFeatures(): Observable<any[]>{
+        return this.client.get('/api/features').pipe(map((response: any[])=>{
+            return response;
+        }))
+    }
 }
