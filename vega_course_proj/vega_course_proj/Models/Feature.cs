@@ -14,10 +14,12 @@ namespace vega_course_proj.Models
         public string Name { get; set; }
 
         public ICollection<ModelFeature> ModelFeature { get; set; }
+        public ICollection<VehicleFeature> Features { get;set; }
 
         public Feature()
         {
             ModelFeature= new Collection<ModelFeature>();
+            Features = new Collection<VehicleFeature>();
         }
     }
 }
